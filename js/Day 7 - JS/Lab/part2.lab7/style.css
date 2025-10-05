@@ -1,0 +1,21 @@
+/* 3 */
+/* #error{
+    color: red;
+    display: none;
+            }
+            #name:invalid+ #error{
+                display: block;
+            } */
+ /* 4 */
+.validation{
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    display: none;
+}
+input:valid ~ .imgValid{
+    display: inline-block;
+}
+input:invalid ~ .imgNotValid{
+    display: inline-block;
+}

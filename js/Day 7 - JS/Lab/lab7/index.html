@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 3 */
+        /* #error{
+color: red;
+display: none;
+        }
+        #name:invalid+ #error{
+            display: block;
+        } */
+/* 4 */
+
+
+
+
+
+
+.gallery {
+    width: 200px;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease;
+    opacity: 1; 
+}
+    </style>
+<script>
+
+
+//d
+
+    function validateName(){
+    let fullN=document.getElementById("fullN");
+let msg=document.getElementById("msg");
+if(fullN.value.length<3){
+msg.innerHTML="the fullname is not valid";
+fullN.style.background='lightgray'
+fullN.focus()
+}else{
+    msg.innerHTML="";
+    fullN.style.background='white'
+}}
+
+document.getElementById("rpass").addEventListener("blur",function(){
+    let pass=document.getElementById("pass").value;
+    let rpass=this.value;
+    let msgg=document.getElementById('msgg');
+    if(pass !== rpass){
+        msgg.innerHTML='password and repeat password should be the same'
+        this.value="";
+        this.focus()
+    }else{
+          msgg.innerHTML='';
+    }
+})
+// 2
+
+function validateForm(event){
+    
+    let pass=document.getElementById("pass").value;
+    let rpass=document.getElementById("rpass").value;
+let fullName=document.getElementById("fullN").value;
+if(fullName.length<3 || pass !== rpass  ){
+  alert("Plz correct the validation errors first.");
+  event.preventDefault();
+}
+}
+//6
+
+</script>
+</head>
+<body>
+    <!-- 1 -->
+    <form action="thank.html" onsubmit="validateForm(event)">
+        <div>
+            <label for="fullN">Full Name:</label>
+            <input type="text" id="fullN" required placeholder="enter your name" onblur="validateName()" onfocus="changeBorder()" >
+            <span id="msg"></span>
+        </div>
+        <br>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+        </div>
+        <br>
+        <div>
+            <label for="City">City:</label>
+           <select name="" id="City">
+            <option value="">Alexandria</option>
+            <option value="">Aswan</option>
+            <option value="">Giza</option>
+            <option value="">Cairo</option>
+            <option value="">Faiyum</option>
+            <option value="">Qena</option>
+           </select>
+        </div>
+        <br>
+        <div>
+            <label for="pass">Password:</label>
+            <input type="password" id="pass" >
+        </div>
+        <br>
+        <div>
+            <label for="rpass">Repeat Password:</label>
+            <input type="password" id="rpass" >
+            <span id="msgg"></span>
+        </div>
+        <br>
+        <div>
+          
+            <input type="checkbox" id="ch" >
+            <label for="ch">I accept the terms and conditions:</label>
+        </div>
+        <br>
+        <input type="submit">
+    </form>
+<hr>
+    <!-- 3 -->
+     <!-- <form action="">
+        <div>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required placeholder="enter your name" minlength="4" >
+            <span id="error">the name should be 3 letters</span>
+        </div>
+        <button type="submit">send</button>
+     </form> -->
+        <!-- 4 -->
+        <form action="">
+            <div>
+                <label for="inpName">Full Name:</label>
+                <input type="text" id="inpName" required placeholder="enter your name" minlength="4" >
+                <img src="./valid.png" alt="" id="imgNotValid" width="30px">
+               <img src="./notvalid.png" alt="" id="imgValid" width="30px">
+            </div>
+            <button type="submit">send</button>
+         </form>
+         <!-- 5 -->
+         <div class="grl">
+            <div class="photos">
+                <img onclick="main.src=this.src" src="./images/girl-3954232__340.jpg" alt="">
+                <img onclick="main.src=this.src" src="./images/people-2561053__340.jpg" alt="">
+                <img onclick="main.src=this.src" src="./images/woman-570883__340.jpg" alt="">
+                <img onclick="main.src=this.src" src="./images/yoga-2176668_960_720.jpg" alt="">
+            </div>
+            <div class="main">
+                <img src="images\woman-2003647__340.jpg" name="main" alt="">
+            </div>
+            <div class="photos">
+                <img onmouseenter="main.src=this.src" src="./" alt="">
+                <img onmouseenter="main.src=this.src" src="./images/people-2561053__340.jpg" alt="">
+                <img onmouseenter="main.src=this.src" src="./images/woman-570883__340.jpg" alt="">
+                <img onmouseenter="main.src=this.src" src="./images/yoga-2176668_960_720.jpg" alt="">
+            </div>
+           </div> 
+          <br>
+          <br>
+          <!-- 6 -->
+   
+            <img src="1.jpg" alt="Photo 1" class="gallery">
+            <img src="2.jpg" alt="Photo 2" class="gallery">
+            <img src="3.jpg" alt="Photo 3" class="gallery">
+            <img src="4.jpg" alt="Photo 4" class="gallery">
+     
+    <script>
+//6
+const images = document.querySelectorAll('.gallery');
+
+images.forEach((image) => {
+    image.addEventListener('mouseover', () => {
+        image.style.opacity = '0.3'; 
+    });
+    image.addEventListener('mouseout', () => {
+        image.style.opacity = '1';
+    });
+});
+    </script>
+    <script src="./index.html"></script>
+</body>
+</html>

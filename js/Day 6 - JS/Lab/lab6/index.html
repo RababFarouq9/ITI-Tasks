@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp" onmousedown='alert(event.button)' onkeydown="showKey(event)">
+    <hr>
+    <button onclick="IntervalDate()">showTime</button> <span id="show"></span>
+    <br>
+ <button onclick="clearInt()" >click</button> <span id="clear"></span>
+    <div id="clock" style="text-align: center; color: brown;">
+
+    </div>
+    <br>
+    <br>
+    <!-- 3 -->
+    <div >
+        <img src="./img1.jpg" alt="" id="image1" >
+        <div >
+            <button id="prev" onclick="prevImg()">prevent</button>
+        <button id="next" onclick="nextImg()">next</button>
+        </div>
+       </div>
+       <br>
+       <br>
+    <!-- 4 -->
+    <form action="welcome.html" method="GET">
+        <div>
+            <label for="username">User Name:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your user name here" required>
+        </div>
+
+     <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+     </div>
+      
+        <button type="submit">Login</button>
+    </form>
+    <br>
+    <br>
+       <!-- 5 -->
+      <a href="#" id="openWin" onclick="openWin()">openWin</a> 
+      <br>
+
+      <a href="#" id="closeWin" onclick="closeWin()">closeWin</a> 
+      <br>
+<a href="#"  onclick="alert(win.closed)">check win</a>
+<br>
+<br>
+<!-- 6 -->
+ <input type="checkbox" id="opwiw" onclick="openScrollWin(this)">
+ <label for="opwiw">open</label>
+ <br>
+ <br>
+ <!-- 7 -->
+  <form action="">
+<label for="us">userName:</label>
+<input type="text" id="us" required onkeydown="validate(event)">
+
+  </form>
+  <br>
+  <br>
+  <!-- 8 -->
+  <input type="number" name="dollar" id="dollar" placeholder="USD">
+  <input type="number" name="pound" id="pound" placeholder="EGP">
+<br>
+<br>
+<!-- 9 -->
+<button id="after" >after</button>
+<button id="before">before</button>
+<button id="append">append</button>
+<p id="contant">contant</p>
+
+<div style="height: 50px; background-color: cadetblue;" id="container"></div>
+<br>
+<br>
+<!-- 10 -->
+<input type="text" value="" id="focus">
+    <script src="script.js"></script>
+</body>
+</html>

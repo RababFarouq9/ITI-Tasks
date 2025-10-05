@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="before">before</button>
+    <button id="inside">inside</button>
+    <button id="after">after</button>
+    <br>
+    <div id="phrase"></div>
+
+ <img  id="img"  src="./fashion-6146328__340.jpg" alt="">
+
+    <script>
+        let after=document.getElementById('after');
+        let before = document.getElementById('before');
+        let inside = document.getElementById('inside');
+        let phrase = document.getElementById('phrase');
+        let img = document.getElementById('img');
+        phrase.style.background='orange';
+        phrase.style.height='200px'
+        img.style.width='25%';
+        after.onclick=function(){
+            phrase.after(img)
+        }
+         before.onclick = function () {
+                phrase.before(img)
+            }
+             inside.onclick = function () {
+                    phrase.append(img)
+                }
+    </script>
+</body>
+</html>

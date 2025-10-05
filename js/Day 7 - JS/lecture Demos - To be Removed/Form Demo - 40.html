@@ -1,0 +1,46 @@
+<HTML>
+	<head>
+		<script>
+			var isFrmValid=false;
+
+			function validateEMail()
+			{
+				let emailInput=document.getElementById("txtEmail");
+				if(emailInput.value.length<3)
+				{
+					emailInput.focus();
+					emailInput.select();
+					document.getElementById("emailMsg").innerHTML="Invalid Email";
+					isFrmValid=false;
+				}
+				else
+				{
+					document.getElementById("emailMsg").innerHTML="";
+					isFrmValid=true;
+				}
+			}
+
+			function register(frm)
+			{
+				if(isFrmValid)
+					frm.submit();
+			}
+		</script>
+	</head>
+	<body >
+		
+		<div id="formDiv">
+			<form action="" method="get" onsubmit="event.preventDefault(); register(this)">
+				Email <input name="emailInput" id="txtEmail" type="text" placeholder="Your Email"
+				 autocomplete="off" onblur="validateEMail()">
+				<span id="emailMsg"></span><br>
+				Pwd <input name="pwd" type="password"><br>
+				<input id="chkRem" type="checkbox"> Remember me <br>
+
+				<input type="submit" value="Register">
+			</form>
+		</div>
+
+	
+	</body>
+</HTML>

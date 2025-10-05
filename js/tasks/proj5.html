@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="proj5Style.css">
+</head>
+<body>
+   <button id="open">open</button> 
+   <button id="close">close</button>
+<div id="container">
+<ul>
+    <li>home</li>
+    <li>courses</li>
+    <li>news</li>
+    <li>problem solving</li>
+    <li>quizze</li>
+    <li>blogs</li>
+    <li>chat</li>
+</ul>
+</div>
+   <script>
+    let open=document.getElementById("open");
+    let close=document.getElementById("close");
+    let container=document.getElementById('container');
+    close.onclick=function(){
+        container.classList.add('hide');
+        close.classList.add('hide');
+        open.classList.remove('hide');
+    }
+    open.onclick=function(){
+        container.classList.remove('hide');
+         close.classList.remove('hide');
+          open.classList.add('hide');
+    }
+    onload=function(){
+         container.classList.add('hide');
+    }
+   </script>
+
+</body>
+</html>

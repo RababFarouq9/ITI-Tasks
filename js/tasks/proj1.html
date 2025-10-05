@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" placeholder="USD" id="dollar">
+    <input type="number" placeholder="EGP" id="pound">
+    <script>
+let dollar=document.getElementById('dollar');
+let pound=document.getElementById('pound');
+dollar.onkeyup=function(){
+    pound.value=dollar.value*60
+}
+    pound.onkeyup = function () {
+        dollar.value = pound.value /60
+    }
+dollar.onfocus=function(){
+    dollar.style.background='green';
+    dollar.style.color='white'
+}
+    pound.onfocus = function () {
+        pound.style.background = 'yellow';
+        pound.style.color = 'black'
+    }
+    </script>
+</body>
+</html>

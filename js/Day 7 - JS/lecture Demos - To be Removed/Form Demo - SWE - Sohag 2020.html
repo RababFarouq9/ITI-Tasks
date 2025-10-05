@@ -1,0 +1,48 @@
+<HTML>
+
+<head>
+    <script>
+        //var isFrmValid = false;
+
+        function validateName(inp) {
+            if (inp.value.length < 3) {
+                inp.style.backgroundColor = "red";
+                document.querySelector('#nameMsg').innerHTML = "Not valid name";
+                inp.focus();
+                return false;
+                //isFrmValid = false;
+            } else {
+                inp.style.backgroundColor = "lightyellow";
+                document.querySelector('#nameMsg').innerHTML = "";
+                return true;
+                //isFrmValid = true;
+            }
+        }
+
+        function validateFrm(event) {
+            event.preventDefault();
+            if (validateName(document.querySelector('#txtName'))) {
+                event.target.submit();
+            } else {
+                alert("Check from values...")
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="formDiv">
+        <form action="Thanks.html" method="get" onsubmit="validateFrm(event)">
+            Name <input name="nameInput" id="txtName" type="text" placeholder="Enter your Name" autocomplete="off" onblur="validateName(this)" required>
+            <span id="nameMsg"></span><br> Pwd <input name="pwd" type="password"><br>
+            <input id="chkRem" type="checkbox"> Remember me <br>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+
+</body>
+
+</HTML>

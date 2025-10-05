@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>\
+    <link rel="stylesheet" href="loginstyle.css">
+</head>
+<body>
+
+    <form action="home.html" method="get">
+        <fieldset>
+            <legend>Log In</legend>
+            <label for="n">User Name:</label>
+            <input type="text" id="n" name="Name" required>
+            <br>
+            <br>
+            <label for="p">Password:</label>
+            <input type="password" id="p" name="password" required>
+            <br>
+            <br>
+            <label for="s">Select Your Location:</label>
+            <select name="select" id="s">
+               <optgroup label="Africa">
+                <option value="">Egypt</option>
+                <option value="">Sudan</option>
+                <option value="">Namibia</option>
+               </optgroup>
+               <optgroup label="Europe">
+                <option value="">France</option>
+                <option value="">Russia</option>
+                <option value="">UK</option>
+               </optgroup>
+               <optgroup label="North America" disabled>
+                <option value="">Canada</option>
+                <option value="">Mexico</option>
+                <option value="">USA</option>
+               </optgroup>
+            </select>
+            <br>
+            <br>
+           <input type="checkbox" id="r">
+           <label for="r">Remember Me</label>
+           <br>
+           <br>
+           <input type="submit" value="LogIn">
+        </fieldset>
+
+    </form>
+</body>
+</html>

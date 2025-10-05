@@ -1,0 +1,51 @@
+<HTML>
+	<head>
+		<script>
+			function clrTxt(){
+				if(document.getElementById("txtName").value=="Your Name")
+					document.getElementById("txtName").value="";
+			}
+
+			function validateName(inpt){
+				if(inpt.value.length<=3)
+				{
+					inpt.value="";
+					inpt.focus();
+					inpt.style.backgroundColor="Yellow";
+					inpt.style.border="1px solid blue";
+					document.getElementById("Msg").innerHTML="Name must be more than 3 letters";
+				}
+				else{
+					inpt.style.backgroundColor="white";
+					inpt.style.border="0px solid blue";
+					document.getElementById("Msg").innerHTML="";
+				}
+			}
+
+			function validateFrm(ev){
+				if (document.getElementById("txtName").value.length<3)
+				{
+					ev.preventDefault();
+				}
+				else
+				{
+					ev.target.submit();
+				}
+			}
+		</script>
+	</head>
+	<body >
+		<div id="formDiv">
+			<form action="" method="get" onsubmit="validateFrm(event)">
+				Name <input name="nameInput" id="txtName" type="text" value="Your Name"
+				onfocus="clrTxt()"
+				onblur="validateName(this)">
+				<span id="Msg"></span><br>
+				Pwd <input name="pwd" type="password"><br>
+				
+				<input type="submit" value="Register">
+			</form>
+		</div>
+
+	</body>
+</HTML>

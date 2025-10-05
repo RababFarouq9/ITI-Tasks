@@ -1,0 +1,23 @@
+table{
+    border: 10px rgb(81, 31, 99) solid;
+    width: 50%;
+    height: 450px;
+    margin: auto;
+    table-layout: fixed;
+}
+td{
+    border: 5px rgb(178, 145, 190) solid;
+    width: 50%;
+  
+}
+/* input{
+    width: 50%;
+} */
+.ipt{
+    width: 98%;
+    height: 100%;
+    
+}
+body{
+    background-color: #ebc8e8;
+}

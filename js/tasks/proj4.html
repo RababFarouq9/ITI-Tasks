@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .name{
+            background-color: rgb(103, 151, 135);
+            color: white;
+            height: 200px;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <p id="words">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae placeat omnis perferendis. Itaque illo aliquid obcaecati. Est labore aperiam, laboriosam explicabo soluta quo. Saepe, libero! Quaerat asperiores porro voluptates necessitatibus!</p>
+    <script>
+let words=document.getElementById('words');
+// words.onmouseover=function(){
+//     this.classList.add("name")
+// }
+//     words.onmouseout = function () {
+//         this.classList.remove("name")
+//     }
+    words.onclick = function () {
+            this.classList.toggle("name")
+        }
+    </script>
+</body>
+</html>

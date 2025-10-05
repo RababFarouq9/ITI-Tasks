@@ -1,0 +1,49 @@
+<HTML>
+	<head>
+		<script>
+			var isFrmValid=false;
+
+			function validateEmail(inp){
+				if(inp.value.length<5)
+				{
+					inp.style.backgroundColor="red";
+					document.querySelector("#emailMsg").innerHTML="<b>Not valid</b>";
+					inp.focus();
+					inp.select();
+					isFrmValid=false;
+				}
+				else
+				{
+					inp.style.backgroundColor="white";
+					document.querySelector("#emailMsg").innerHTML="";
+					isFrmValid= true;
+				}
+			}
+
+			function validateFrm(e){
+				e.preventDefault();
+
+				if(isFrmValid)
+				{
+					e.target.submit();
+				}
+			}
+		</script>
+	</head>
+	<body >
+		
+		<div id="formDiv">
+			<form action="Thanks.html" method="get" onsubmit="validateFrm(event)">
+				Email <input name="emailInput" id="txtEmail" type="email" placeholder="Your Email"
+				 autocomplete="off" onfocus="this.style.backgroundColor='lightgray'" onblur="validateEmail(this)">
+				<span id="emailMsg"></span><br>
+				Pwd <input name="pwd" type="password"><br>
+				<input id="chkRem" type="checkbox"> Remember me <br>
+
+				<input type="submit" value="Register">
+			</form>
+		</div>
+
+	
+	</body>
+</HTML>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="proj3.css">
+</head>
+<body>
+    <button onclick="changeButtonColor(this.id)" id="orange">orange</button>
+    <button  onclick="changeButtonColor(this.id)" id="yellow">yellow</button>
+    <button  onclick="changeButtonColor(this.id)" id="green">green</button>
+<script>
+    function changeButtonColor(color){
+localStorage.setItem('colorName',color)
+        document.body.style.background=color;
+    }
+    if(localStorage.length>0){
+         document.body.style.background = localStorage.getItem('colorName');
+    }
+    // localStorage.clear();
+</script>
+</body>
+</html>

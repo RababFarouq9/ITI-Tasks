@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="txt" type="text" value="your name">
+    <button id="btn">click</button>
+    <script>
+        let txt =document.getElementById("txt");
+        let btn=document.getElementById("btn")
+       window.onload=function(){
+            btn.click();
+            txt.onfocus();
+            txt.value='test'
+            
+        }
+    </script>
+</body>
+</html>

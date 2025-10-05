@@ -1,0 +1,21 @@
+<HTML>
+	<head>
+		
+	</head>
+	<body >
+
+		<h1>Thanks, <div id="usrname"></div></h1>
+		<script>
+			var qString=location.search;
+			console.log(qString);
+
+			var qStringparts= qString.split("&");
+			console.log(qStringparts);
+
+			var usrName= qStringparts[0].split("=")[1];
+
+			document.querySelector("#usrname").innerHTML=unescape(usrName);
+		</script>
+
+	</body>
+</HTML>

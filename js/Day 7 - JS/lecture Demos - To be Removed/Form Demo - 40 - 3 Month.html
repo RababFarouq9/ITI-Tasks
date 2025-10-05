@@ -1,0 +1,54 @@
+<HTML>
+	<head>
+		<script>
+			function changeColor(inp)
+			{
+				inp.style.backgroundColor="lightgray";
+			}
+
+			function validateEmail(inp)
+			{
+				if(inp.value.length<3)
+				{
+					document.querySelector("#emailMsg").innerHTML="<b>Email Not valid</b>";
+					inp.focus();
+					inp.select();
+					return false;
+				}
+				else
+				{
+					document.querySelector("#emailMsg").innerHTML="";
+					return true;
+				}
+			}
+
+			function validateFrm(ev)
+			{
+				ev.preventDefault();
+				if(validateEmail(document.querySelector("#txtEmail")))
+				{
+					ev.target.submit();
+				}
+			}
+		</script>
+	</head>
+	<body >
+		
+		<div id="formDiv">
+			<form action="Thanks.html" method="get" onsubmit="validateFrm(event)">
+				Email <input name="emailInput" id="txtEmail" type="text" 
+				placeholder="Enter your email"
+				onfocus="changeColor(this)"
+				onblur="validateEmail(this)"
+				 autocomplete="off" >
+				<span id="emailMsg"></span><br>
+				Pwd <input name="pwd" type="password"><br>
+				<input id="chkRem" type="checkbox"> Remember me <br>
+
+				<input type="submit" value="Register">
+			</form>
+		</div>
+
+	
+	</body>
+</HTML>
